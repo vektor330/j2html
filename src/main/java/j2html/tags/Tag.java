@@ -4,7 +4,7 @@ import j2html.attributes.Attribute;
 
 import java.util.ArrayList;
 
-public abstract class Tag {
+public abstract class Tag extends Renderable{
 
     protected String tag;
     protected ArrayList<Attribute> attributes;
@@ -38,6 +38,7 @@ public abstract class Tag {
         return attributes.add(new Attribute(name, value));
     }
 
+    @Override
     public String render() {
         return renderOpenTag() + renderCloseTag();
     }

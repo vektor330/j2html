@@ -29,6 +29,14 @@ public class ContainerTag extends Tag {
         return this;
     }
 
+    public ContainerTag withRenderable(final Renderable renderable) {
+        if (this == renderable){
+            throw new Error("Cannot append a tag to itself.");
+        }
+        return this.withText(renderable.render());
+    }
+
+
     /**
      * Call with-method based on condition
      * {@link #with(Tag child)}
