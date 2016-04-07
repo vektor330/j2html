@@ -34,7 +34,7 @@ public class EmptyTag extends Tag {
         for (Attribute attribute : attributes) {
             tagAttributes += attribute;
         }
-        return "<" + tag + tagAttributes + ">";
+        return "<" + tag + tagAttributes + "/>";
     }
 
     @Override
